@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿	using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -22,7 +22,7 @@ public class RoomManager : Photon.PunBehaviour {
         if (PhotonNetwork.isMasterClient)
         {
             //isBeingMasterClient = true;
-            readyButton.GetComponentInChildren<Text>().text = "Start";
+			readyButton.GetComponentInChildren<Text>().text = "BATTLE";
         }
 
         for (int i = 1; i < (int)CharactersName.CharatersLen; i++)
@@ -183,7 +183,7 @@ public class RoomManager : Photon.PunBehaviour {
 
     public override void OnLeftRoom()
     {
-        SceneManager.LoadScene("Lobby");
+        SceneManager.LoadScene("New Lobby");
     }
 
     public void ReturnButton()
